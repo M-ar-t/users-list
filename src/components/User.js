@@ -24,7 +24,14 @@ class User extends React.Component{
                 <p><img className='avatar' src={this.user.avatar} alt=''/></p>
                 <b>{this.user.isHappy?"Счастлив :)":"В депрессии :("}</b>
 
-                {this.state.isEdit && <AddUsers addUser ={this.props.editUser} user = {this.user}/>}
+                {this.state.isEdit && <AddUsers addUser ={this.props.editUser} 
+                                                user = {this.user} 
+                                                ref_firstName ={this.user.first_name}                       
+                                                ref_lastName = {this.user.last_name}
+                                                ref_email ={this.user.email}
+                                                ref_avatar ={this.user.avatar}
+                                                ref_isHappy ={this.user.isHappy}
+                                                />}
                 </div>)}
                   
     }

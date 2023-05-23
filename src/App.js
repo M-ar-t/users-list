@@ -11,7 +11,6 @@ class App extends React.Component{
 
         axios.get(baseURL).then((res)=>{
             this.setState({users:res.data.data})
-            console.log(res.data.data);
         })
         this.state ={
             users:[]
